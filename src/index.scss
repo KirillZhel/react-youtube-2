@@ -22,3 +22,45 @@ code {
 		margin-right: 1rem;
 	}
 }
+
+/*стили для библиотеки react-transition-group*/
+/*стили применяются для компонента Alert.js*/
+.alert-enter {
+	opacity: 0;
+}
+/*стили выполнения анимации*/
+.alert-enter-active {
+	transition: opacity 500ms ease-out;
+	opacity: 1;
+}
+
+.alert-exit-active {
+	transition: opacity 350ms ease-out;
+	opacity: 0;
+}
+
+/*стили применяются для компонента Notes.js*/
+.note-exit-active {
+	animation: note 800ms ease-out forwards;
+}
+
+.note-enter-active {
+	animation: note 800ms ease-in alternate-reverse;
+}
+
+/*анимация для класса note*/
+@keyframes note {
+	0% {
+		transform: translateX(0);
+	}
+
+	30% {
+		opacity: 0.7;
+		transform: translateX(30px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+}
